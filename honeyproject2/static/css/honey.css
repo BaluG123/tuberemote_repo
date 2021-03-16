@@ -1,0 +1,12 @@
+.sidebar{
+  float: left;
+  width:15%;
+}
+.content{
+  float: left;
+  width: 80%;
+}
+#video-list:hover{
+  border:1px solid #3b5998;
+  padding: 2px;
+}

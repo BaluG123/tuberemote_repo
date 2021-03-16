@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load staticfiles %}
+{% block title %}
+list of videos
+{% endblock %}
+{% block sidebar %}
+<ul>
+  <li>spend some time!</li>
+</ul>
+{% endblock %}
+{% block content %}
+<h3 align=center style="border-bottom:1px solid red;padding:4px;">click N joy </h3>
+{% for video in videos_list %}
+{% if video.video %}
+{% if video.image %}
+<div class="row" style="float:left;margin:1px 1px 0 14px;">
+  <div class="col-lg-3 col-md-6 col-xs-12">
+    <a href="{{video.get_absolute_url}}">
+<video src="{{video.video.url}}" poster="{{video.image.url}}" controlslist="nofullscreen nodownload" controls width="230px" height="220px" muted loop id='video-list'>
+<source src="{{video.video.url}}" type="video/">
+
+</video><br>
+<p style="width:150px;color:black;">{{video.title}}</p></a>
+<p style="width:150px;font-size:14px;color:#696969;"><i><a href="#"> @{{video.user}}</a> at {{video.uploaded}}</i></p>
+</div>
+</div>
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endblock %}

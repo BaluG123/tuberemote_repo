@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block title %}
+profile..
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <span style="border-bottom:1px solid black">note:take first smae as username [instead of space take as - ] ,in user field choose exactly your username!(credit :you!) </span>
+    <span>note: in birthday col take (yyyy-m-d) order!</span>
+    <h1 style="color:#3b5998;"><small><i>create profile</i></small></h1>
+    <form enctype="multipart/form-data" method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="submit" name="" value="create" class="btn btn-success btn-sm">
+
+    </form>
+
+  </div>
+
+</div>
+{% endblock %}

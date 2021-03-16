@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>watchnjoy.com.. Signup</title>
+    <link rel="stylesheet" href="{% static "css/face.css"%}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css"%}">
+    <style media="screen">
+      body{
+        background:#DCDCDC;
+      }
+    .leftbar{
+      width:55%;
+      float:right;
+    }
+    .login-box{
+      width:45%;
+      float:left;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="left-bar" style="margin:100px 0 20px 400px;padding:10px">
+      <p style="color:white;border-bottom:1px solid #3b5998;width:200px;font-size:30px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-collection-play-fill" viewBox="0 0 16 16" style="color:#7B68EE;">
+  <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437z"/>
+</svg> watch <span style="color:green;">n</span> joy </p>
+      <p> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-collection-play-fill" viewBox="0 0 16 16" style="color:orange;">
+  <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437z"/>
+</svg> watchnjoy helps you connect and share with the people in your life.</p>
+    <div class="login-box" style="height:400px;width:600px;border:1px solid white;padding:20px 100px 100px 100px;margin:10px 0 100px 170px;background:#363945;color:white;">
+      <h1 style="border-bottom:1px solid white;padding-bottom:10px;" align=center id="signup"><small>SignUp</small></h1>
+      <form class="form-group" method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" name="" value="SignUp" style="margin-left:0px;width:400px;" class="btn btn-primary">
+
+      </form>
+      <p>remember username and password correclty.! to save your activity.!</p>
+    </div>
+    </div>
+  </body>
+</html>
